@@ -135,11 +135,6 @@ def librewolf_patches():
     exec('cp ../patches/pref-pane/librewolf.css browser/themes/shared/preferences/librewolf.css')
     exec('cp ../patches/pref-pane/librewolf.inc.xhtml browser/components/preferences/librewolf.inc.xhtml')
     exec('cp ../patches/pref-pane/librewolf.js browser/components/preferences/librewolf.js')
-    # 3) append our locale string values to preferences.ftl
-    exec('cat browser/locales/en-US/browser/preferences/preferences.ftl ../patches/pref-pane/preferences.ftl > preferences.ftl')
-    exec('mv preferences.ftl browser/locales/en-US/browser/preferences/preferences.ftl')
-
-
     
     # provide a script that fetches and bootstraps Nightly and some mozconfigs
     exec('cp -v ../scripts/mozfetch.sh lw/')
@@ -166,7 +161,8 @@ if len(args) != 2:
     sys.exit(1)
 version = args[0]
 release = args[1]
-if not os.path.exists('librewolf-{}-{}'.format(version, release) + '/configure.py'):
+srcdir = "librewolf-{}-{}".format(version, release)
+if not os.path.exists(srcdir + '/configure.py'):
     sys.stderr.write('error: folder doesn\'t look like a Firefox folder.')
     sys.exit(1)
 
