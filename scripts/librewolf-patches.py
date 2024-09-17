@@ -9,6 +9,8 @@ import os
 import sys
 import optparse
 import time
+from pathlib import Path
+from tempfile import TemporaryDirectory
 
 
 #
@@ -145,9 +147,39 @@ def librewolf_patches():
         with open(file, "w") as f:
             f.write("{}-{}".format(version,release))
 
-    # generate locales
-    exec("bash ../scripts/generate-locales.sh")
-    
+    print("-> Downloading locales from https://github.com/mozilla-l10n/firefox-l10n")
+    with TemporaryDirectory() as tmpdir:
+        exec(f"curl -o {tmpdir}/l10n.zip 'https://codeload.github.com/mozilla-l10n/firefox-l10n/zip/refs/heads/main'")
+        exec(f"unzip -qo {tmpdir}/l10n.zip -d {tmpdir}/l10n")
+        exec(f"mv {tmpdir}/l10n/firefox-l10n-main/* browser/locales")
+
+    print("-> Applying LibreWolf locales")
+    l10n_dir = Path("..", "l10n")
+    for source_path in l10n_dir.rglob("*"):
+        if source_path.is_dir() or source_path.name.endswith(".md"):
+            continue
+
+
+
+        rel_path = source_path.relative_to(l10n_dir)
+        target_path = Path(
+            "browser", "locales",
+            rel_path.parts[0], 
+            *([] if rel_path.parts[0] == "en-US" else ["browser"]) , 
+            *rel_path.parts[1:])
+        target_path.parent.mkdir(parents=True, exist_ok=True)
+
+        write_mode = "w"
+        if ".inc" in target_path.name:
+            target_path = target_path.with_name(target_path.name.replace(".inc", ""))
+            write_mode = "a"
+
+        print(f"{source_path} {">" if write_mode == "w" else ">>"} {target_path}")
+
+        with open(target_path, write_mode) as target_file:
+            with open(source_path, "r") as source_file:
+                target_file.write(("\n\n" if write_mode == "a" else "") + source_file.read())
+
     leave_srcdir()
 
 
