@@ -174,7 +174,7 @@ def librewolf_patches():
             target_path = target_path.with_name(target_path.name.replace(".inc", ""))
             write_mode = "a"
 
-        print(f"{source_path} {">" if write_mode == "w" else ">>"} {target_path}")
+        print(f"{source_path} {'>' if write_mode == 'w' else '>>'} {target_path}")
 
         with open(target_path, write_mode) as target_file:
             with open(source_path, "r") as source_file:
