@@ -1,0 +1,11 @@
+librewolf-header = LibreWolf Beállítások
+librewolf-warning-title = Figyelem!
+librewolf-general-heading = Böngésző viselkedés
+librewolf-extension-update-checkbox =
+    .label = A kiegészítők automatikus frissítése
+librewolf-sync-checkbox =
+    .label = Firefox Sync engedélyezése
+pane-librewolf-title = LibreWolf
+librewolf-warning-description = Gondosan választjuk ki az alapértelmezett beállításokat, hogy az adatvédelemre és a biztonságra összpontosítsunk. Ha módosítja ezeket a beállításokat, akkor olvassa el a leírást, hogy megértse a módosítások következményeit.
+category-librewolf =
+    .tooltiptext = about:config változások, logikusan csoportosítva és könnyen elérhetően
