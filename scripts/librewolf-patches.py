@@ -149,7 +149,7 @@ def librewolf_patches():
 
     print("-> Downloading locales from https://github.com/mozilla-l10n/firefox-l10n")
     with TemporaryDirectory() as tmpdir:
-        exec(f"curl -o {tmpdir}/l10n.zip 'https://codeload.github.com/mozilla-l10n/firefox-l10n/zip/refs/heads/main'")
+        exec(f"wget -qO {tmpdir}/l10n.zip 'https://codeload.github.com/mozilla-l10n/firefox-l10n/zip/refs/heads/main'")
         exec(f"unzip -qo {tmpdir}/l10n.zip -d {tmpdir}/l10n")
         exec(f"mv {tmpdir}/l10n/firefox-l10n-main/* browser/locales")
 
