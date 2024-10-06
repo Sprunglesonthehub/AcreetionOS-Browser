@@ -1,0 +1,7 @@
+-screenshots-brand-name = Screenshots
+-profiler-brand-name = Profiler
+-translations-brand-name = Translations
+-firefox-suggest-brand-name = Suggestions
+-firefox-home-brand-name = Homepage
+-firefoxview-brand-name = Browser View
+-firefoxlabs-brand-name = Experimental Features

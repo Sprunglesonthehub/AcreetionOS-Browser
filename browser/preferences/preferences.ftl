@@ -1,3 +1,5 @@
+session-restore-learn-more = What if it does not work?
+
 ## LibreWolf preferences
 
 # Sidebar
