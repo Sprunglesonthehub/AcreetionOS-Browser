@@ -153,13 +153,15 @@ def librewolf_patches():
         exec(f"unzip -qo {tmpdir}/l10n.zip -d {tmpdir}/l10n")
         exec(f"mv {tmpdir}/l10n/firefox-l10n-main/* browser/locales")
 
+    print("-> Patching appstrings.properties")
+    # Why is "Firefox" hardcoded there???
+    exec("find browser/locales -path '*/appstrings.properties' -exec sed -i s/Firefox/LibreWolf/ {} \;")
+
     print("-> Applying LibreWolf locales")
     l10n_dir = Path("..", "l10n")
     for source_path in l10n_dir.rglob("*"):
         if source_path.is_dir() or source_path.name.endswith(".md"):
             continue
-
-
 
         rel_path = source_path.relative_to(l10n_dir)
         target_path = Path(
