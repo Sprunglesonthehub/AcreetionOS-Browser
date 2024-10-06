@@ -5,3 +5,4 @@ category-librewolf =
 librewolf-security-heading = Sicherheit
 librewolf-sync-checkbox =
     .label = Firefox Sync aktivieren
+librewolf-privacy-heading = Privatsphäre
