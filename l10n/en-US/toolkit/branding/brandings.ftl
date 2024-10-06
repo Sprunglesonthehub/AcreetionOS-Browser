@@ -3,5 +3,5 @@
 -translations-brand-name = Translations
 -firefox-suggest-brand-name = Suggestions
 -firefox-home-brand-name = Homepage
--firefoxview-brand-name = Browser View
+-firefoxview-brand-name = Tab View
 -firefoxlabs-brand-name = Experimental Features
