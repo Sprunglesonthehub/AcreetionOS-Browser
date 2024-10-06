@@ -1,0 +1,2 @@
+-firefox-suggest-brand-name = Vorschläge
+-firefox-home-brand-name = Startseite
