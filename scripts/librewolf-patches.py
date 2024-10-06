@@ -173,7 +173,8 @@ def librewolf_patches():
         else:
             target_path = Path(
                 "lw", "l10n",
-                *rel_path.parts
+                *rel_path.parts[0:2],
+                *rel_path.parts[1:]
             )
         target_path.parent.mkdir(parents=True, exist_ok=True)
 
