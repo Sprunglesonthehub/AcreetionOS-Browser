@@ -1,4 +1,5 @@
-# AcreetionOS Browser, Brought to you by the AcreetionOS Team.
+# AcreetionOS Browser
+Brought to you by the AcreetionOS Team.
 
 Are you wondering why we decided to make a web browser? Well, Firefox can't be trusted anymore, and LibreWolf has gone woke. So, we just kind of had too.
 
