@@ -13,8 +13,8 @@ ac_add_options --enable-optimize
 ac_add_options --enable-release
 ac_add_options --enable-rust-simd
 
-ac_add_options --with-app-name=librewolf
-ac_add_options --with-branding=browser/branding/librewolf
+ac_add_options --with-app-name=AcreetionOS_Browser
+ac_add_options --with-branding=browser/branding/AcreetionOS_Browser
 
 ac_add_options --with-unsigned-addon-scopes=app,system
 

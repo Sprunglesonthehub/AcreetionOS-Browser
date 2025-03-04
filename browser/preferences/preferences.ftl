@@ -1,91 +1,82 @@
 session-restore-learn-more = What if it does not work?
 
-## LibreWolf preferences
+## AcreetionOS_Browser preferences
 
 # Sidebar
-pane-librewolf-title = LibreWolf
-category-librewolf =
+pane-acreetionos_browser-title = acreetionos_browser
+category-acreetionos_browser =
     .tooltiptext = about:config changes, logically grouped and easily accessible
 
 # Main content
-librewolf-header = LibreWolf Preferences
-librewolf-warning-title = Heads up!
-librewolf-warning-description = We carefully choose default settings to focus on privacy and security. When changing these settings, read the descriptions to understand the implications of those changes.
+acreetionos_browser-header = AcreetionOS_Browser Preferences
+acreetionos_browser-warning-title = Look here!
+acreetionos_browser-warning-description = We carefully choose default settings to focus on privacy and security; as well as ease-of-use. When changing these settings, read the descriptions to understand the implications of those changes. But if you need help understanding what any of this means, feel free to join us on Discord, or email us at acreetionos@gmail.com.
 
 # Page Layout
-librewolf-general-heading = Browser Behavior
-librewolf-extension-update-checkbox =
+acreetionos_browser-general-heading = Browser Behavior
+acreetionos_browser-extension-update-checkbox =
     .label = Update add-ons automatically
-librewolf-sync-checkbox =
-    .label = Enable Firefox Sync
-librewolf-autocopy-checkbox =
+acreetionos_browser-autocopy-checkbox =
     .label = Enable middle click paste
-librewolf-styling-checkbox = 
+acreetionos_browser-styling-checkbox =
     .label = Allow userChrome.css customization
 
-librewolf-network-heading = Networking
-librewolf-ipv6-checkbox =
-    .label = Enable IPv6
+acreetionos_browser-network-heading = Networking
 
-librewolf-privacy-heading = Privacy
-librewolf-xorigin-ref-checkbox =
+acreetionos_browser-privacy-heading = Privacy
+acreetionos_browser-xorigin-ref-checkbox =
     .label = Limit cross-origin referrers
 
-librewolf-broken-heading = Fingerprinting
-librewolf-webgl-checkbox =
+acreetionos_browser-broken-heading = Fingerprinting
+acreetionos_browser-webgl-checkbox =
     .label = Enable WebGL
-librewolf-rfp-checkbox =
+acreetionos_browser-rfp-checkbox =
     .label = Enable ResistFingerprinting
-librewolf-auto-decline-canvas-checkbox =
+acreetionos_browser-auto-decline-canvas-checkbox =
     .label = Silently block canvas access requests
-librewolf-letterboxing-checkbox =
+acreetionos_browser-letterboxing-checkbox =
     .label = Enable letterboxing
 
-librewolf-security-heading = Security
-librewolf-ocsp-checkbox =
+acreetionos_browser-security-heading = Security
+acreetionos_browser-ocsp-checkbox =
     .label = Enforce OCSP hard-fail
-librewolf-goog-safe-checkbox =
+acreetionos_browser-goog-safe-checkbox =
     .label = Enable Google Safe Browsing
-librewolf-goog-safe-download-checkbox =
+acreetionos_browser-goog-safe-download-checkbox =
     .label = Scan downloads
 
 # In-depth descriptions
-librewolf-extension-update-description = Keep extensions up to date without manual intervention. A good choice for your security.
-librewolf-extension-update-warning1 = If you don't review the code of your extensions before every update, you should enable this option.
+acreetionos_browser-extension-update-description = Keep extensions up to date without manual intervention. A good choice for your security.
+acreetionos_browser-extension-update-warning1 = If you don't review the code of your extensions before every update, you should enable this option.
+acreetionos_browser-ocsp-description = Prevent connecting to a website if the OCSP check cannot be performed.
+acreetionos_browser-ocsp-warning1 = This increases security, but it will cause breakage when an OCSP server is down.
 
-librewolf-ipv6-description = Allow { -brand-short-name } to connect using IPv6.
-librewolf-ipv6-warning1 = Instead of blocking IPv6 in the browser, we suggest enabling the IPv6 privacy extension in your OS.
-librewolf-ocsp-description = Prevent connecting to a website if the OCSP check cannot be performed.
-librewolf-ocsp-warning1 = This increases security, but it will cause breakage when an OCSP server is down.
-librewolf-sync-description = Sync your data with other browsers. Requires restart.
-librewolf-sync-warning1 = Firefox Sync encrypts data locally before transmitting it to the server.
+acreetionos_browser-autocopy-description = Select some text to copy it, then paste it with a middle-mouse click.
 
-librewolf-autocopy-description = Select some text to copy it, then paste it with a middle-mouse click.
+acreetionos_browser-styling-description = Enable this if you want to customize the UI with a manually loaded theme.
+acreetionos_browser-styling-warning1 = Make sure you trust the provider of the theme.
 
-librewolf-styling-description = Enable this if you want to customize the UI with a manually loaded theme.
-librewolf-styling-warning1 = Make sure you trust the provider of the theme.
+acreetionos_browser-xorigin-ref-description = Send a referrer only on same-origin.
 
-librewolf-xorigin-ref-description = Send a referrer only on same-origin.
-librewolf-xorigin-ref-warning1 = This may cause breakage. Additionally, even when sent referrers will still be trimmed.
+acreetionos_browser-webgl-description = WebGL is a strong fingerprinting vector.
+acreetionos_browser-webgl-warning1 = If you need to enable it, consider using an extension like Canvas Blocker.
 
-librewolf-webgl-description = WebGL is a strong fingerprinting vector.
-librewolf-webgl-warning1 = If you need to enable it, consider using an extension like Canvas Blocker.
+acreetionos_browser-rfp-description = ResistFingerprinting is the best in class anti-fingerprinting tool.
+acreetionos_browser-rfp-warning1 = If you need to disable it, consider using an extension like Canvas Blocker.
 
-librewolf-rfp-description = ResistFingerprinting is the best in class anti-fingerprinting tool.
-librewolf-rfp-warning1 = If you need to disable it, consider using an extension like Canvas Blocker.
 
-librewolf-auto-decline-canvas-description = Automatically deny canvas access to websites, without prompting the user.
-librewolf-auto-decline-canvas-warning1 = It is still possible to allow canvas access from the urlbar.
+acreetionos_browser-auto-decline-canvas-description = Automatically deny canvas access to websites, without prompting the user.
+acreetionos_browser-auto-decline-canvas-warning1 = It is still possible to allow canvas access from the urlbar.
 
-librewolf-letterboxing-description = Letterboxing applies margins around your windows, in order to return a limited set of rounded resolutions.
+acreetionos_browser-letterboxing-description = Letterboxing applies margins around your windows, in order to return a limited set of rounded resolutions.
 
-librewolf-goog-safe-description = If you are worried about malware and phishing, consider enabling it.
-librewolf-goog-safe-warning1 = Disabled over censorship concerns but recommended for less advanced users. All the checks happen locally.
+acreetionos_browser-goog-safe-description = If you are worried about malware and phishing, consider enabling it.
+acreetionos_browser-goog-safe-warning1 = Disabled over censorship concerns but recommended for less advanced users. All the checks happen locally.
 
-librewolf-goog-safe-download-description = Allow Safe Browsing to scan your downloads to identify suspicious files.
-librewolf-goog-safe-download-warning1 = All the checks happen locally.
+acreetionos_browser-goog-safe-download-description = Allow Safe Browsing to scan your downloads to identify suspicious files.
+acreetionos_browser-goog-safe-download-warning1 = All the checks happen locally.
 
 # Footer
-librewolf-footer = Useful linkss
-librewolf-config-link = All advanced settings (about:config)
-librewolf-open-profile = Open user profile directory
+acreetionos_browser-footer = Useful links
+acreetionos_browser-config-link = All advanced settings (about:config)
+acreetionos_browser-open-profile = Open user profile directory
