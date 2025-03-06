@@ -1,0 +1,40 @@
+ac_add_options --enable-linker=lld
+
+ac_add_options --prefix=/usr
+
+ac_add_options --disable-bootstrap
+
+export CC='clang'
+export CXX='clang++'
+
+# Branding
+ac_add_options --with-app-name=acreetionos-browser
+# TODO: re-evaluate
+ac_add_options --enable-update-channel=release
+
+export MOZ_APP_REMOTINGNAME=acreetionos-browser
+
+# System libraries
+ac_add_options --with-system-nspr
+ac_add_options --with-system-nss
+
+# Features
+# keep alsa option in here until merged upstream
+ac_add_options --enable-alsa
+ac_add_options --enable-jack
+ac_add_options --enable-pulseaudio
+
+# wasi
+ac_add_options --with-wasi-sysroot=/usr/share/wasi-sysroot
+
+# options for ci / weaker build systems
+# mk_add_options MOZ_MAKE_FLAGS="-j4"
+# ac_add_options --enable-linker=gold
+
+# optimizations
+ac_add_options OPT_LEVEL="2"
+ac_add_options RUSTC_OPT_LEVEL="2"
+# Arch upstream has it in their PKGBUILD, ALARM does not for aarch64:
+ac_add_options --disable-elf-hack
+
+ac_add_options --enable-lto=cross
